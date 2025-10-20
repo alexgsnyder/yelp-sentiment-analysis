@@ -1,0 +1,34 @@
+column,dtype,non_null_frac,description
+AllCapsFrac,float64,1.0,Share of tokens in ALL CAPS
+Business_Avg_Rating,float64,1.0,Average rating for the business
+Business_Is_Open,int64,1.0,Business open flag (0/1)
+Category,object,1.0,Business category/labels (optional)
+City,object,1.0,Business city (optional)
+Confidence,float64,1.0,"Model confidence in sentiment [0,1]"
+Date,datetime64[ns],1.0,Review timestamp
+Emotion,object,1.0,Primary emotion label from text (categorical)
+Emotion_Confidence,float64,1.0,"Model confidence for Emotion label [0,1]"
+ExclaimFrac,float64,1.0,Share of characters that are '!'
+NegationFlag,int64,1.0,1 if contains common negations; else 0
+Review,object,1.0,Raw review text
+Review_Len,int64,1.0,Alias of Review_Len_words for modeling compatibility
+Review_Len_chars,int64,1.0,Character count of review
+Review_Len_words,int64,1.0,Word count of review
+Star_Bucket,object,1.0,"Categorized rating: Low (1–2), Mid (3), High (4–5)"
+Stars,float64,1.0,"User’s 1–5 star rating (int, clipped to [1,5])"
+State,object,1.0,Business state (optional)
+User_Avg_Star_Rating,float64,1.0,Reviewer’s average star rating across their reviews
+business_id,object,1.0,Business unique id
+business_name,object,1.0,Business name
+business_review_count,int64,1.0,Number of reviews for the business
+computed_sentiment,float64,1.0,Team-standard confidence-weighted sentiment (label→numeric × Confidence)
+emotion_anger,float64,1.0,Weighted dummy for emotion 'anger' (multiplied by Emotion_Confidence)
+emotion_disgust,float64,1.0,Weighted dummy for emotion 'disgust' (multiplied by Emotion_Confidence)
+emotion_fear,float64,1.0,Weighted dummy for emotion 'fear' (multiplied by Emotion_Confidence)
+emotion_joy,float64,1.0,Weighted dummy for emotion 'joy' (multiplied by Emotion_Confidence)
+emotion_neutral,float64,1.0,Weighted dummy for emotion 'neutral' (multiplied by Emotion_Confidence)
+emotion_sadness,float64,1.0,Weighted dummy for emotion 'sadness' (multiplied by Emotion_Confidence)
+emotion_surprise,float64,1.0,Weighted dummy for emotion 'surprise' (multiplied by Emotion_Confidence)
+review_id,object,1.0,Review unique id
+user_id,object,1.0,User unique id
+user_review_count,int64,1.0,Number of reviews by the user
