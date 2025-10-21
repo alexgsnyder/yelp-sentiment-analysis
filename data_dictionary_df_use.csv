@@ -1,0 +1,34 @@
+column,description
+Stars,"User’s star rating (int in [1,5])"
+Star_Bucket,"Categorized rating: Low (1–2), Mid (3), High (4–5)"
+computed_sentiment,"Confidence-weighted sentiment (label×Confidence) clipped to [-1,1]"
+Confidence,"Model confidence for sentiment prediction [0,1]"
+Emotion,Primary emotion label extracted from text
+Emotion_Confidence,"Model confidence score for the emotion label [0,1]"
+Review,Raw review text
+Date,Timestamp of the review
+City,City where the business is located
+State,State where the business is located
+business_category1,Primary business category (first listed label parsed from categories field)
+business_name,Name of the business (identifier for location/category grouping)
+Review_Len_words,Word count of review
+Review_Len_chars,Character count of review
+Review_Len,Alias of Review_Len_words for modeling compatibility
+ExclaimFrac,Fraction of characters that are exclamation marks
+AllCapsFrac,Fraction of tokens that are in ALL CAPS
+NegationFlag,"1 if review contains common negation words (e.g., 'not', 'never')"
+Business_Avg_Rating,Average star rating for the business
+User_Avg_Star_Rating,Reviewer’s average star rating across all reviews
+Business_Is_Open,"Business open flag (0=closed, 1=open)"
+user_review_count,Total number of reviews by the user
+business_review_count,Total number of reviews for the business
+business_id,Unique business identifier
+user_id,Unique user identifier
+review_id,Unique review identifier
+emotion_anger,Weighted dummy for emotion 'anger' (multiplied by Emotion_Confidence)
+emotion_disgust,Weighted dummy for emotion 'disgust' (multiplied by Emotion_Confidence)
+emotion_fear,Weighted dummy for emotion 'fear' (multiplied by Emotion_Confidence)
+emotion_joy,Weighted dummy for emotion 'joy' (multiplied by Emotion_Confidence)
+emotion_neutral,Weighted dummy for emotion 'neutral' (multiplied by Emotion_Confidence)
+emotion_sadness,Weighted dummy for emotion 'sadness' (multiplied by Emotion_Confidence)
+emotion_surprise,Weighted dummy for emotion 'surprise' (multiplied by Emotion_Confidence)
